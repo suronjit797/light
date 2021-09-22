@@ -1,0 +1,213 @@
+body {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: #222;
+}
+
+body.active#main_white {
+  background: radial-gradient(white, #9e9e9e);
+}
+
+body.active#main_white .circle {
+  background: #fff;
+  -webkit-box-shadow: 0 0px 20px 13px #fff;
+          box-shadow: 0 0px 20px 13px #fff;
+}
+
+body.active#main_white .top {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(58%, white));
+  background: linear-gradient(black, white 58%);
+}
+
+body.active#main_red {
+  background: radial-gradient(red, #210101);
+}
+
+body.active#main_red .circle {
+  background: red;
+  -webkit-box-shadow: 0 0px 20px 13px red;
+          box-shadow: 0 0px 20px 13px red;
+}
+
+body.active#main_red .top {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(58%, red));
+  background: linear-gradient(black, red 58%);
+}
+
+body.active#main_blue {
+  background: radial-gradient(blue, #210101);
+}
+
+body.active#main_blue .circle {
+  background: blue;
+  -webkit-box-shadow: 0 0px 20px 13px blue;
+          box-shadow: 0 0px 20px 13px blue;
+}
+
+body.active#main_blue .top {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(58%, blue));
+  background: linear-gradient(black, blue 58%);
+}
+
+body.active#main_green {
+  background: radial-gradient(green, #210101);
+}
+
+body.active#main_green .circle {
+  background: green;
+  -webkit-box-shadow: 0 0px 20px 13px green;
+          box-shadow: 0 0px 20px 13px green;
+}
+
+body.active#main_green .top {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(58%, green));
+  background: linear-gradient(black, green 58%);
+}
+
+body.active .wair {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(transparent));
+  background: linear-gradient(180deg, black, transparent);
+}
+
+.light {
+  position: relative;
+  z-index: 99;
+}
+
+.light .circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0px 20px 13px #535353;
+          box-shadow: 0 0px 20px 13px #535353;
+  background-color: #535353;
+}
+
+.light .top {
+  position: absolute;
+  top: -100px;
+  left: calc(50% - 50px);
+  height: 200px;
+  width: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(58%, #535353));
+  background: linear-gradient(black, #535353 58%);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  z-index: -1;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  border: 3px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  z-index: 99;
+}
+
+.sw {
+  height: 100px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: #535353;
+  position: relative;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.sw::before {
+  content: "";
+  background-color: #292929;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.sw.active {
+  background-color: #59ff2f;
+}
+
+.sw.active::before {
+  background-color: #28c900;
+  bottom: calc(100% - 50px);
+}
+
+.wair {
+  height: 10px;
+  width: 500px;
+  background: black;
+  position: absolute;
+  position: absolute;
+  top: -100px;
+  left: -199%;
+}
+
+.color {
+  margin-top: 20px;
+}
+
+.color::-moz-selection {
+  display: none;
+}
+
+.color::selection {
+  display: none;
+}
+
+.color div {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 6px 7px 15px -3px black;
+          box-shadow: 6px 7px 15px -3px black;
+}
+
+.color div.active {
+  border: 2px solid black;
+}
+
+.color .white {
+  background-color: white;
+}
+
+.color .red {
+  background-color: red;
+}
+
+.color .blue {
+  background-color: blue;
+}
+
+.color .green {
+  background-color: green;
+}
+
+.color .all {
+  background: radial-gradient(red 10.3%, blue 52.33%, green 20.33%);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,173 @@
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: #222;
+
+  &.active {
+    &#main_white {
+      background: radial-gradient(white, #9e9e9e);
+      .circle {
+        background: #fff;
+        box-shadow: 0 0px 20px 13px #fff;
+      }
+      .top {
+        background: linear-gradient(black, white 58%);
+      }
+    }
+
+    &#main_red {
+      background: radial-gradient(red, #210101);
+      .circle {
+        background: rgb(255, 0, 0);
+        box-shadow: 0 0px 20px 13px red;
+      }
+      .top {
+        background: linear-gradient(black, rgb(255, 0, 0) 58%);
+      }
+    }
+
+    &#main_blue {
+      background: radial-gradient(blue, #210101);
+      .circle {
+        background: blue;
+        box-shadow: 0 0px 20px 13px blue;
+      }
+      .top {
+        background: linear-gradient(black, blue 58%);
+      }
+    }
+
+    &#main_green {
+      background: radial-gradient(green, #210101);
+      .circle {
+        background: green;
+        box-shadow: 0 0px 20px 13px green;
+      }
+      .top {
+        background: linear-gradient(black, green 58%);
+      }
+    }
+
+
+
+    .wair {
+      background: linear-gradient(180deg, black, transparent);
+    }
+  }
+}
+
+.light {
+  position: relative;
+  z-index: 99;
+  .circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0px 20px 13px #535353;
+    background-color: rgb(83, 83, 83);
+  }
+  .top {
+    position: absolute;
+    top: -100px;
+    left: calc(50% - 50px);
+    height: 200px;
+    width: 100px;
+    background: linear-gradient(black, rgb(83, 83, 83) 58%);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    z-index: -1;
+  }
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  border: 3px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  z-index: 99;
+}
+
+.sw {
+  height: 100px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: rgb(83, 83, 83);
+  position: relative;
+  transition: 0.5s ease;
+
+  &::before {
+    content: "";
+    background-color: rgb(41, 41, 41);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease;
+  }
+
+  &.active {
+    background-color: rgb(89, 255, 47);
+    &::before {
+      background-color: rgb(40, 201, 0);
+
+      bottom: calc(100% - 50px);
+    }
+  }
+}
+
+.wair {
+  height: 10px;
+  width: 500px;
+  background: black;
+  position: absolute;
+  position: absolute;
+  top: -100px;
+  left: -199%;
+}
+
+.color {
+  margin-top: 20px;
+
+  &::selection {
+    display: none;
+  }
+
+  div {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 6px 7px 15px -3px black;
+
+    &.active {
+      border: 2px solid black;
+    }
+  }
+  .white {
+    background-color: white;
+  }
+  .red {
+    background-color: red;
+  }
+  .blue {
+    background-color: blue;
+  }
+  .green {
+    background-color: green;
+  }
+  .all {
+    background: radial-gradient(red 10.3%, blue 52.33%, green 20.33%);
+  }
+}
